@@ -24,12 +24,92 @@
         <link href="http://fonts.googleapis.com/css?family=Hind:300,400,500,600,700" rel="stylesheet" type="text/css">
         <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css"/>
         <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-
+        <style>
+            body {
+                font-family: 'Roboto', sans-serif;
+                line-height: 1.6;
+            }
+            h1, h2, h3 {
+                font-weight: 700;
+            }
+            .navbar {
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            }
+            .nav-item:hover {
+                color: #007bff;
+                text-decoration: underline;
+            }
+            .nav-item-active {
+                font-weight: bold;
+                border-bottom: 2px solid #007bff;
+            }
+            .promo-block {
+                background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/1920x1080/01.jpg') no-repeat center center;
+                background-size: cover;
+                color: white;
+                text-align: center;
+                padding: 100px 20px;
+            }
+            .promo-block-title {
+                font-size: 3rem;
+                font-weight: bold;
+            }
+            .promo-block-text {
+                font-size: 1.2rem;
+            }
+            .cta-button {
+                background-color: #007bff;
+                color: white;
+                padding: 10px 20px;
+                border-radius: 5px;
+                text-decoration: none;
+            }
+            .cta-button:hover {
+                background-color: #0056b3;
+            }
+            .footer {
+                background-color: #333;
+                color: #fff;
+                padding: 20px 0;
+                text-align: center;
+            }
+            .footer a {
+                color: #007bff;
+                text-decoration: none;
+            }
+            .footer a:hover {
+                text-decoration: underline;
+            }
+        </style>
+        
+        <script>
+            $(document).ready(function () {
+                $('a[href^="#"]').on('click', function (e) {
+                    e.preventDefault();
+                    $('html, body').animate({
+                        scrollTop: $($(this).attr('href')).offset().top
+                    }, 500);
+                });
+            });
+        </script>
         <!-- PAGE LEVEL PLUGIN STYLES -->
         <link href="css/animate.css" rel="stylesheet">
 
         <!-- THEME STYLES -->
         <link href="css/layout.min.css" rel="stylesheet" type="text/css"/>
+
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+        <style>
+            .social-icons i {
+                font-size: 1.5rem;
+                margin: 0 10px;
+                color: #007bff;
+            }
+            .social-icons i:hover {
+                color: #0056b3;
+            }
+        </style>
+
 
         <!-- Favicon -->
         <link rel="shortcut icon" href="favicon.ico"/>
